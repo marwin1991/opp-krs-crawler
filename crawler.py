@@ -19,8 +19,8 @@ def getLiEpit(dane, name):
         return ""
     
 
-with open('C:/Users/Piotr/Desktop/a/dane.csv', newline='') as csvfile:
-   writer = csv.writer(open('C:/Users/Piotr/Desktop/a/dane-finall-output.csv', 'w', newline=''), delimiter=',')
+with open('./sample-data.csv', newline='') as csvfile:
+   writer = csv.writer(open('./sample-output.csv', 'w', newline=''), delimiter=',')
    spamreader = csv.reader(csvfile, delimiter=',', quotechar='|')
    for row in spamreader:
        r = requests.get('https://www.pitax.pl/rozliczenie-pit-online-' + row[0]+ "/")
